@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรแกรมคำนวณค่าทางเคมี</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>โปรแกรมคำนวณค่าทางเคมี</h1>
+        
+        <form id="calc-form">
+            <!-- คำนวณจำนวนโมล -->
+            <div class="form-section">
+                <h2>คำนวณจำนวนโมล</h2>
+                <label for="mass">มวล (กรัม):</label>
+                <input type="number" id="mass" required>
+                <label for="molar-mass">มวลโมเลกุล (g/mol):</label>
+                <input type="number" id="molar-mass" required>
+                <button type="button" onclick="calculateMoles()">คำนวณ</button>
+            </div>
+
+            <!-- คำนวณความเข้มข้น -->
+            <div class="form-section">
+                <h2>ความเข้มข้น(M)</h2>
+                <label for="mass-substance-concentration">มวลของสาร (กรัม):</label>
+                <input type="number" id="mass-substance-concentration" required>
+                <label for="molar-mass-concentration">มวลโมเลกุล (g/mol):</label>
+                <input type="number" id="molar-mass-concentration" required>
+                <label for="volume">ปริมาตร (ลิตร):</label>
+                <input type="number" id="volume" required>
+                <button type="button" onclick="calculateConcentration()">คำนวณ</button>
+            </div>
+
+            <!-- คำนวณเปอร์เซ็นต์มวล -->
+            <div class="form-section">
+                <h2>ร้อยละโดยมวล</h2>
+                <label for="mass-substance-percent">มวลของสาร (กรัม):</label>
+                <input type="number" id="mass-substance-percent" required>
+                <label for="total-mass">มวลรวม (กรัม):</label>
+                <input type="number" id="total-mass" required>
+                <button type="button" onclick="calculatePercentMass()">คำนวณ</button>
+            </div>
+
+            <!-- คำนวณ pH -->
+            <div class="form-section">
+                <h2>คำนวณ pH</h2>
+                <label for="h-concentration">ความเข้มข้นของ H<sup>+</sup> (M):</label>
+                <input type="number" id="h-concentration" required>
+                <button type="button" onclick="calculatePH()">คำนวณ</button>
+            </div>
+
+            <!-- คำนวณความดันจากกฎแก๊สอุดมคติ -->
+            <div class="form-section">
+                <h2>คำนวณความดัน</h2>
+                <label for="n">จำนวนโมล:</label>
+                <input type="number" id="n" required>
+                <label for="temperature">อุณหภูมิ (K):</label>
+                <input type="number" id="temperature" required>
+                <label for="volume-gas">ปริมาตร (L):</label>
+                <input type="number" id="volume-gas" required>
+                <button type="button" onclick="calculateIdealGasLaw()">คำนวณ</button>
+            </div>
+
+            <!-- คำนวณความร้อน -->
+            <div class="form-section">
+                <h2>คำนวณความร้อน</h2>
+                <label for="heat-mass">มวล (kg):</label>
+                <input type="number" id="heat-mass" required>
+                <label for="specific-heat">ความจุความร้อนจำเพาะ (J/kg·K):</label>
+                <input type="number" id="specific-heat" required>
+                <label for="delta-T">ΔT (K):</label>
+                <input type="number" id="delta-T" required>
+                <button type="button" onclick="calculateHeat()">คำนวณ</button>
+            </div>
+        </form>
+
+        <!-- กล่องแสดงผลลัพธ์ -->
+        <div id="results" class="result-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
