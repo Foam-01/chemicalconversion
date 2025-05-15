@@ -19,9 +19,9 @@ ChemicalConversion is a simple and user-friendly web application that allows use
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Foam-01/chemicalconversion.git
-Open the index.html file in any modern web browser (such as Chrome, Firefox, or Edge).
+2. Open the index.html file in any modern web browser (such as Chrome, Firefox, or Edge).
 
-Start using the application immediately—no installation needed.
+3. Start using the application immediately—no installation needed.
 
 
 ![image](https://github.com/user-attachments/assets/db483ff2-2291-4875-8973-e7730b11f0d7)
